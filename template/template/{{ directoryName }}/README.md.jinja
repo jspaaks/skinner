@@ -1,0 +1,31 @@
+# `{{ directoryName }}/{{ programName }}.hs`
+
+## Interactive
+
+```console
+$ cd {{ directoryName }}
+$ ghci
+GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
+λ :load {{ programName }}.hs
+[1 of 2] Compiling Main             ( {{ programName }}.hs, interpreted )
+Ok, one module loaded.
+λ main
+Hello, world!
+```
+
+## Compiled
+
+```console
+$ cd {{ directoryName }}
+$ ghc {{ programName }}.hs
+[1 of 2] Compiling Main             ( {{ programName }}.hs, {{ programName }}.o )
+[2 of 2] Linking {{ programName }}
+$ ./HelloWorld
+Hello, world!
+```
+
+## Linting
+
+```console
+hlint {{ programName }}.hs
+```

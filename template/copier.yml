@@ -1,0 +1,8 @@
+_subdirectory: template
+
+directoryName:
+    type: str
+    help: What is the directory name of the new project? (Use [0-9]{3})
+programName:
+    type: str
+    help: What is the name of the program? (Use [A-Z][A-Za-z0-9_]*)
