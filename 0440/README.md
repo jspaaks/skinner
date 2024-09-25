@@ -1,9 +1,9 @@
-# `044/Factorials.hs`
+# `0440/Factorials.hs`
 
 ## Interactive
 
 ```console
-$ cd 044
+$ cd 0440
 $ ghci
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 λ :load Factorials.hs

@@ -1,13 +1,13 @@
-# `016/Composition.hs`
+# `0160/Composition.hs`
 
 ## Interactive
 
 ```console
-$ cd 016
+$ cd 0160
 $ ghci
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 λ :load Composition.hs
-[1 of 2] Compiling Main             ( Composition.hs, interpreted )
+[1 of 2] Compiling Composition             ( Composition.hs, interpreted )
 Ok, one module loaded.
 λ addOne 4
 5

@@ -1,13 +1,13 @@
-# `045/Fibonacci.hs`
+# `0450/Fibonacci.hs`
 
 ## Interactive
 
 ```console
-$ cd 045
+$ cd 0450
 $ ghci
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 λ :load Fibonacci.hs
-[1 of 2] Compiling Main             ( Fibonacci.hs, interpreted )
+[1 of 2] Compiling Fibonacci             ( Fibonacci.hs, interpreted )
 Ok, one module loaded.
 λ fibonacci 0
 0
