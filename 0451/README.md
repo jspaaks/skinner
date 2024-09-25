@@ -6,6 +6,8 @@
 $ cd 0451
 $ ghci
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
+```
+```haskell
 λ :load Currying.hs
 [1 of 1] Compiling Currying             ( Currying.hs, interpreted )
 Ok, one module loaded.
