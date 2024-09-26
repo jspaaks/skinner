@@ -11,8 +11,12 @@ GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 λ :load Factors.hs
 [1 of 1] Compiling Factors             ( Factors.hs, interpreted )
 Ok, one module loaded.
-λ f
-Hello, world!
+λ factorize 12
+[2,2,3]
+λ factorize 102
+[2,3,17]
+λ factorize 103
+[103]
 ```
 
 ## Linting
