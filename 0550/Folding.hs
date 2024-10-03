@@ -8,6 +8,6 @@ module Folding where
     foldr f acc lst
         | null lst = acc
         | otherwise = f (head lst) $ foldr f acc (tail lst)
---                    ------------
---                    partial function application of a function f whose 2 parameters
---                    are reversed compared to that used in foldl --I don't know why
+--                    ^^^^^^^^^^^^
+--                    partial function application of a function f, only works because
+--                    their order is reversed compared to that used in foldl
