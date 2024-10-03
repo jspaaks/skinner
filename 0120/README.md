@@ -3,7 +3,6 @@
 ## Interactive
 
 ```console
-$ cd 0120
 $ ghci
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 λ :load Greeting.hs

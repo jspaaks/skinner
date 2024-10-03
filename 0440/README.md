@@ -3,7 +3,6 @@
 ## Interactive
 
 ```console
-$ cd 0440
 $ ghci
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 λ :load Factorials.hs

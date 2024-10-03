@@ -3,7 +3,6 @@
 ## Interactive
 
 ```console
-$ cd 0130
 $ ghci
 GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
 Loaded GHCi configuration from /home/nlesc/.config/ghc/ghci.conf

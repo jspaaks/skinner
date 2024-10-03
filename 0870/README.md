@@ -3,7 +3,6 @@
 ## Interactive
 
 ```console
-$ cd 0870
 $ ghci
 ```
 ```haskell
