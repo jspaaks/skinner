@@ -17,7 +17,7 @@ Ok, one module loaded.
 7
 λ mycurry sumOfTupleElems 3 4         -- use user implementation mycurry
 7
-λ addition = mycurry sumOfTupleElems  -- function composition
+λ addition = mycurry sumOfTupleElems
 λ addOne = addition 1                 -- partial function application
 λ addTwo = addition 2
 λ addOne 1                            -- fully saturated function
