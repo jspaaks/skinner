@@ -1,0 +1,20 @@
+cabal-version:      3.0
+name:               import-demo
+version:            0.1.0.0
+synopsis:           Import demo
+license:            Apache-2.0
+license-file:       LICENSE
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+builddir            dist
+
+common warnings
+    ghc-options: -Wall
+
+executable import-demo
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base ^>=4.17.2.0
+                    , text
+    hs-source-dirs:   app
+    default-language: Haskell2010
