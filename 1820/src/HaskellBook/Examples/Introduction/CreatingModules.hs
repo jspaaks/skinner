@@ -1,4 +1,10 @@
-module HaskellBook.Examples.Introduction.CreatingModules where
+module HaskellBook.Examples.Introduction.CreatingModules
+    ( Name (Name)
+    , Salutation (Salutation)
+    , Greeting (Greeting)
+    , formatMessage
+    , createGreeting
+    ) where
 
     import Data.List (intercalate)
 
