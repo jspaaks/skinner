@@ -16,6 +16,27 @@ Loaded GHCi configuration from /home/nlesc/.config/ghc/ghci.conf
 [1 of 1] Compiling HaskellBook.Examples.Introduction.CreatingModules ( src/HaskellBook/Examples/Introduction/CreatingModules.hs, interpreted )
 Ok, one module loaded.
 λ import HaskellBook.Examples.Introduction.CreatingModules 
+λ name = Name "John"
+λ nameToString name
+"John"
+λ salutation = Salutation "Good day"
+λ salutationToString salutation
+"Good day"
+λ :{
+┣ greeting = Greeting
+┣     { greetingGetSalutation = Salutation "Good day"
+┣     , greetingGetTo = Name "John"
+┣     , greetingGetFroms = [ Name "Mary"
+┣                          , Name "Isobel"
+┣                          ]
+┣     }
+┣ :}
+λ salutationToString $ greetingGetSalutation greeting
+"Good day"
+λ nameToString $ greetingGetTo greeting
+"John"
+λ map nameToString (greetingGetFroms greeting)
+["Mary","Isobel"]
 λ formatMessage createGreeting
 "Hello Friend!"
 λ :{
