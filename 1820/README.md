@@ -7,22 +7,61 @@ $ cabal repl
 ```
 
 ```haskell
-λ g1 = defaultGreeting
-λ formatMessage g1
+Build profile: -w ghc-9.4.7 -O1
+In order, the following will be built (use -v for more details):
+ - module-examples-0.1.0.0 (lib) (first run)
+Preprocessing library for module-examples-0.1.0.0..
+GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/nlesc/.config/ghc/ghci.conf
+[1 of 1] Compiling HaskellBook.Examples.Introduction.CreatingModules ( src/HaskellBook/Examples/Introduction/CreatingModules.hs, interpreted )
+Ok, one module loaded.
+λ import HaskellBook.Examples.Introduction.CreatingModules 
+λ formatMessage createGreeting
 "Hello Friend!"
-λ g2 = defaultGreeting { greetingGetTo = Name "Joseph" }
-λ formatMessage g2
-"Hello Joseph!"
-λ g3 = defaultGreeting { greetingGetFroms = [Name "Mary"], greetingGetTo = Name "Joseph" }
-λ formatMessage g3
-"Hello Joseph from your friend Mary!"
-λ g4 = defaultGreeting { greetingGetFroms = [Name "Mary", Name "Mark"], greetingGetTo = Name "Joseph" }
-λ formatMessage g4
-"Hello Joseph from your friends Mary and Mark!"
-λ g5 = defaultGreeting { greetingGetFroms = [Name "Mary", Name "Mark", Name "Jackie"], greetingGetTo = Name "Joseph" }
-λ formatMessage g5
-"Hello Joseph from your friends Mary, Mark, and Jackie!"
-λ g6 = defaultGreeting { greetingGetFroms = [Name "Mary", Name "Mark", Name "Jackie", Name "Isobel"], greetingGetTo = Name "Joseph" }
-λ formatMessage g6
-"Hello Joseph from your friends Mary, Mark, Jackie, and Isobel!"
+λ :{
+┣ formatMessage createGreeting
+┣     { greetingGetTo = Name "John"
+┣     }
+┣ :}
+"Hello John!"
+λ :{
+┣ formatMessage createGreeting
+┣     { greetingGetTo = Name "John"
+┣     , greetingGetFroms = [ Name "Mary" ]
+┣     }
+┣ :}
+"Hello John from your friend Mary!"
+λ :{
+┣ formatMessage createGreeting
+┣     { greetingGetTo = Name "John"
+┣     , greetingGetFroms = [ Name "Mary"
+┣                          , Name "Mark"
+┣                          ]
+┣     }
+┣ :}
+"Hello John from your friends Mary and Mark!"
+λ :[
+unknown command ':['
+use :? for help.
+λ :{
+┣ formatMessage createGreeting
+┣     { greetingGetTo = Name "John"
+┣     , greetingGetFroms = [ Name "Mary"
+┣                          , Name "Mark"
+┣                          , Name "Jackie"
+┣                          ]
+┣     }
+┣ :}
+"Hello John from your friends Mary, Mark, and Jackie!"
+λ :{
+┣ formatMessage createGreeting
+┣     { greetingGetTo = Name "John"
+┣     , greetingGetFroms = [ Name "Mary"
+┣                          , Name "Mark"
+┣                          , Name "Jackie"
+┣                          , Name "Isobel"
+┣                          ]
+┣     }
+┣ :}
+"Hello John from your friends Mary, Mark, Jackie, and Isobel!"
 ```

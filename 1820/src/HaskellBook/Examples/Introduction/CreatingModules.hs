@@ -1,4 +1,5 @@
 module HaskellBook.Examples.Introduction.CreatingModules where
+
     import Data.List (intercalate)
 
     data Name = Name { nameToString :: String }
@@ -7,40 +8,41 @@ module HaskellBook.Examples.Introduction.CreatingModules where
         { greetingGetSalutation :: Salutation
         , greetingGetFroms :: [Name]
         , greetingGetTo :: Name
-    }
-
-    formatFroms :: [Name] -> String
-    formatFroms names = helper (length names) (map nameToString names) where
-        helper :: Int -> [String] -> String
-        helper n names'
-            | n == 0    = ""
-            | n == 1    = head names'
-            | n == 2    = intercalate " and " $ names'
-            | n == 3    = unwords $ zipWith (<>) names' [",", ", and", ""]
-            | otherwise = (head names') <> ", " <> helper (n - 1) (tail names')
-
-    basicGreeting :: Greeting -> String
-    basicGreeting greeting = intercalate " " [a,b] where
-        a = salutationToString $ greetingGetSalutation greeting
-        b = nameToString $ greetingGetTo greeting
+        }
 
     formatMessage :: Greeting -> String
-    formatMessage greeting = helper (length $ greetingGetFroms greeting) where
-        helper n
-            | n == 0    = exclaim $ intercalate " " [a]
-            | n == 1    = exclaim $ intercalate " " [a, b', c]
-            | otherwise = exclaim $ intercalate " " [a, b, c]
+    formatMessage greeting = formatMessageHelper (length $ greetingGetFroms greeting) where
+        formatMessageHelper n
+            | n == 0    = exclaim $ a
+            | n == 1    = exclaim $ unwords [a,b',c]
+            | otherwise = exclaim $ unwords [a,b,c]
             where
-                a  = basicGreeting greeting
+                a  = basicMessage greeting
                 b  = "from your friends"
                 b' = init b
                 c  = formatFroms $ greetingGetFroms greeting
 
-    exclaim :: String -> String
-    exclaim s = s <> "!"
+                basicMessage :: Greeting -> String
+                basicMessage greeting' = unwords [d,e] where
+                    d = salutationToString $ greetingGetSalutation greeting'
+                    e = nameToString $ greetingGetTo greeting'
 
-    defaultGreeting :: Greeting
-    defaultGreeting = Greeting
+                exclaim :: String -> String
+                exclaim s = s <> "!"
+
+                formatFroms :: [Name] -> String
+                formatFroms names = formatFromsHelper (length names) (map nameToString names) where
+                    formatFromsHelper :: Int -> [String] -> String
+                    formatFromsHelper m names'
+                        | m == 0    = ""
+                        | m == 1    = head names'
+                        | m == 2    = intercalate " and " $ names'
+                        | m == 3    = unwords $ zipWith (<>) names' [",", ", and", ""]
+                        | otherwise = (head names') <> ", " <> formatFromsHelper (m - 1) (tail names')
+
+
+    createGreeting :: Greeting
+    createGreeting = Greeting
         { greetingGetSalutation = Salutation "Hello"
         , greetingGetFroms = []
         , greetingGetTo = Name "Friend"
