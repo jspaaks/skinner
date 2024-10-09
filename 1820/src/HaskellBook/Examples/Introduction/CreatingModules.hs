@@ -1,7 +1,15 @@
 module HaskellBook.Examples.Introduction.CreatingModules
-    ( Name (Name)
-    , Salutation (Salutation)
-    , Greeting (Greeting)
+    ( Name ( Name
+           , nameToString
+           )
+    , Salutation ( Salutation
+                 , salutationToString
+                 )
+    , Greeting ( Greeting
+               , greetingGetSalutation
+               , greetingGetFroms
+               , greetingGetTo
+               )
     , formatMessage
     , createGreeting
     ) where
