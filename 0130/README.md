@@ -5,7 +5,6 @@
 ```console
 $ ghci
 GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
-Loaded GHCi configuration from /home/nlesc/.config/ghc/ghci.conf
 λ :l Greeting.hs 
 [1 of 2] Compiling Main             ( Greeting.hs, interpreted )
 Ok, one module loaded.

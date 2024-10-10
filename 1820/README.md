@@ -12,7 +12,6 @@ In order, the following will be built (use -v for more details):
  - module-examples-0.1.0.0 (lib) (first run)
 Preprocessing library for module-examples-0.1.0.0..
 GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
-Loaded GHCi configuration from /home/nlesc/.config/ghc/ghci.conf
 [1 of 1] Compiling HaskellBook.Examples.Introduction.CreatingModules ( src/HaskellBook/Examples/Introduction/CreatingModules.hs, interpreted )
 Ok, one module loaded.
 λ import HaskellBook.Examples.Introduction.CreatingModules 

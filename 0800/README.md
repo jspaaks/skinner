@@ -9,7 +9,6 @@ $ ghci
 ```
 ```haskell
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
-Loaded GHCi configuration from /home/nlesc/.config/ghc/ghci.conf
 λ :load Fibonacci.hs 
 [1 of 1] Compiling Fibonacci        ( Fibonacci.hs, interpreted )
 Ok, one module loaded.

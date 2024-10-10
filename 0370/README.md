@@ -5,7 +5,6 @@
 ```console
 $ ghci                                                                                                                                                                                                                                                                                                       
 GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
-Loaded GHCi configuration from /home/nlesc/.config/ghc/ghci.conf
 λ :load Fizzbuzz.hs 
 [1 of 1] Compiling Fizzbuzz         ( Fizzbuzz.hs, interpreted )
 Ok, one module loaded.
